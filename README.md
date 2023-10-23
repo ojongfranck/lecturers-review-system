@@ -1,2 +1,2 @@
 # lecturers-review-system
-A web application for review lecturer
+A web application to review on lecturers
