@@ -3,7 +3,13 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-  ],  theme: {
+  ],
+  theme: {
+    fontFamily: {
+      'poppins': ['Poppins', 'sans-serif'],
+      'andika': ['Andika', 'sans-serif'],
+      'opensans': ["'Open Sans'", 'sans-serif'],
+    },
     extend: {},
   },
   daisyui: {

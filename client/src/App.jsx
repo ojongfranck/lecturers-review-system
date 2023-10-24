@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import { _404_, Home ,Login,Signup} from './pages'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
 
-  return(
-    <button className="btn btn-primary">TeachReview</button>
+  return (
+    <Routes>
+      <Route index path="/" element={<Home />} />
+      <Route path='/login' element={<Login log={true} />} />
+      <Route path='/signup' element={<Signup log={false} />} />
+      <Route path="*" element={<_404_ />} />
+    </Routes>
   )
 }
 
-export default App
+
