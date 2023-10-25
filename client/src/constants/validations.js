@@ -3,7 +3,7 @@ import { passReg, emailReg } from './regex'
 
 const Matricule = Yup.string()
     .length(8, "Shouldn't exceed 8 characters")
-    .required('your username is required!')
+    .required('your matricule is required!')
 
 const FullName = Yup.string()
     .min(6, 'Should be greater than 5 characters ')
@@ -31,7 +31,7 @@ const Required = Yup.string().required('This is a required field')
 //     }).required('please provide your phone number')
 
 const Terms = Yup.boolean()
-    .oneOf([true], 'You must accept the terms and conditions')
+    .oneOf([true], 'You must accept our terms and conditions')
 
 
 export { Matricule, Required, Email, Password, Terms, ConfirmPassword, FullName }

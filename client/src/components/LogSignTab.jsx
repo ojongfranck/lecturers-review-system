@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function LogSignTab({setType,onLogin,onSignup}) {
+export default function LogSignTab({ setType, onLogin, onSignup }) {
     return (
         <div className="mt-8 text-center -mb-[.8px]">
             <h3 className='text-2xl font-bold mb-8'>Teach Review</h3>

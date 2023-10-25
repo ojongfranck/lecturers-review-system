@@ -2,7 +2,7 @@ import { Form, Formik } from 'formik';
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
-import { Required,Email } from '../constants/validations'
+import { Required, Email } from '../constants/validations'
 import * as Yup from 'yup'
 import { ToastContainer, toast } from 'react-toastify'
 import { PasswordField } from '../components/Fields';
@@ -45,7 +45,7 @@ export default function Login({ log = true }) {
                     <PasswordField id='Password' label='Password' />
                     <button type='button' onClick={() => my_modal_2.showModal()} className="text-right mt-3 link-error cursor-pointer">forgot password?</button>
                     <button type="submit" className="btn btn-primary mt-4">login</button>
-                    <p className='text-sm mt-3'>Don't have an account yet? <Link reloadDocument={true} to='/signup' className='act'>signup</Link></p>
+                    <p className='text-sm mt-3'>Don't have an account yet? <Link onClick={() => setType('s')} to='/signup' className='act'>signup</Link></p>
                     <ToastContainer position='top-right' />
                 </Form>
             </Formik>
@@ -54,19 +54,19 @@ export default function Login({ log = true }) {
                     <h3 className="font-bold text-lg text-error">Password Reset</h3>
                     <p className="py-4">Please provide us your email, to receive instructions on how to reset your password</p>
                     <Formik
-                        initialValues={{ mail: '' }}
-                        validationSchema={Yup.object().shape({mail:Email})}
+                        initialValues={{ resetMail: '' }}
+                        validationSchema={Yup.object().shape({ resetMail: Email })}
                         onSubmit={values => alert(JSON.stringify(values))}
                     >
                         <Form>
                             <Input
-                                id='mail'
+                                id='resetMail'
                                 label="Your Email"
-                                name="mail"
+                                name="resetMail"
                                 type="email"
                                 placeholder="youremail@gmail.com"
                             // maxLength="100"
-                            />                        
+                            />
                             <button type='submit' className='btn btn-primary text-white mt-3 w-full'> reset</button>
                         </Form>
                     </Formik>
