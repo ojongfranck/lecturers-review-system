@@ -12,6 +12,7 @@ export default function Home() {
             />
             <Link to='/login' className="btn">Login</Link>
             <Link to='/signup' className="btn">Signup</Link>
+            <Link to='/contact' className="btn">Contact</Link>
         </div>
     )
 }

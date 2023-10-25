@@ -3,7 +3,7 @@ import { passReg, emailReg } from './regex'
 
 const Matricule = Yup.string()
     .length(8, "Shouldn't exceed 8 characters")
-    .required('your matricule is required!')
+    .required('Your matricule is required!')
 
 const FullName = Yup.string()
     .min(6, 'Should be greater than 5 characters ')
@@ -17,11 +17,11 @@ const Password = Yup.string()
 
 const ConfirmPassword = Yup.string()
     .oneOf([Yup.ref('Password'), null], "Passwords should match")
-    .required('confirm password is required!')
+    .required('Confirm password is required!')
 
 const Email = Yup.string()
     .matches(emailReg, { message: 'Invalid email address' })
-    .required('your email is required!')
+    .required('Your email is required!')
 
 const Required = Yup.string().required('This is a required field')
 

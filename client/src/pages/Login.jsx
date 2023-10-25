@@ -6,7 +6,7 @@ import { Required, Email } from '../constants/validations'
 import * as Yup from 'yup'
 import { ToastContainer, toast } from 'react-toastify'
 import { PasswordField } from '../components/Fields';
-import { Input, LogSignTab, SEO } from '../components';
+import { Icon, Input, LogSignTab, SEO } from '../components';
 
 export default function Login({ log = true }) {
     const [onLogin, setOnlogin] = useState(log)
@@ -51,7 +51,10 @@ export default function Login({ log = true }) {
             </Formik>
             <dialog id="my_modal_2" className="modal">
                 <div className="modal-box">
-                    <h3 className="font-bold text-lg text-error">Password Reset</h3>
+                    <div className="flex justify-between">
+                        <h3 className="font-bold text-lg text-error">Password Reset</h3>
+                        <Icon onClick={() => my_modal_2.close()} className='btn btn-circle btn-outline btn-xs border-error text-error' name='X' />
+                    </div>
                     <p className="py-4">Please provide us your email, to receive instructions on how to reset your password</p>
                     <Formik
                         initialValues={{ resetMail: '' }}
@@ -72,7 +75,7 @@ export default function Login({ log = true }) {
                     </Formik>
                 </div>
                 <form method="dialog" className="modal-backdrop bg-[#0005]">
-                    <button>close</button>
+                    <button></button>
                 </form>
             </dialog>
         </div>

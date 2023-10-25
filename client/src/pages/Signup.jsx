@@ -81,7 +81,7 @@ export default function UserForm({ log = true }) {
                     <div className="sm:flex gap-4">
                         <PasswordField
                             id='Password'
-                            label='Password'
+                            label='Password '
                         />
                         <PasswordField
                             id='ConfirmPassword'
