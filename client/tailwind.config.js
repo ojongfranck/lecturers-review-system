@@ -10,11 +10,20 @@ export default {
       'andika': ['Andika', 'sans-serif'],
       'opensans': ["'Open Sans'", 'sans-serif'],
     },
-    extend: {},
+    utitlities:{
+      '.box':{
+        margin:'0 auto',
+        width : '90%'
+      },
+      '.group-2-input':{
+        "tvt":'lg:flex sm:flex gap-0 lg:gap-4 grid sm:gap-4'
+
+      },
+    },
+    extend: {}
   },
   daisyui: {
     themes: ["winter"],
   },
   plugins: [require("daisyui")],
 }
-

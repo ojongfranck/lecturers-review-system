@@ -45,7 +45,7 @@ export default function Login({ log = true }) {
                     <PasswordField id='Password' label='Password' />
                     <button type='button' onClick={() => my_modal_2.showModal()} className="text-right mt-3 link-error cursor-pointer">forgot password?</button>
                     <button type="submit" className="btn btn-primary mt-4">login</button>
-                    <p className='text-sm mt-3'>Don't have an account yet? <Link onClick={() => setType('s')} to='/signup' className='act'>signup</Link></p>
+                    <p className='text-sm mt-3'>Don't have an account yet? <Link onClick={() => setType('s')} to='/signup' className='act link-primary'>signup</Link></p>
                     <ToastContainer position='top-right' />
                 </Form>
             </Formik>
