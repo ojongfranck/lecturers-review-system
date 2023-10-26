@@ -94,7 +94,7 @@ export default function UserForm({ log = true }) {
                     </div>
                     <button type="submit" className="btn btn-primary" >signup</button>
                     <ToastContainer position='top-right' />
-                    <p className='text-xs mt-2'>Already have an account? <Link to='/login' onClick={() => setType('l')} className='act'>login instead</Link></p>
+                    <p className='text-xs mt-2'>Already have an account? <Link to='/login' onClick={() => setType('l')} className='act link-primary'>login instead</Link></p>
                 </Form>
             </Formik>
 

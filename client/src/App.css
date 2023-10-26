@@ -13,6 +13,10 @@
 ::-webkit-scrollbar{
   display: none;
 }
+.box{
+  margin: 0 auto;
+  width: 90%;
+}
 #root {
   min-height: 100vh;
   max-width: 1380px;
@@ -20,10 +24,6 @@
   padding: 2em 0;
 }
 
-.box {
-  width: 90%;
-  margin :0 auto;
-}
 form input:not([type='checkbox'], [type='file']) {
   padding: 1.5em .5em !important;
 }
