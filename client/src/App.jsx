@@ -1,6 +1,6 @@
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import { _404_, Contact, Home ,Login,Signup} from './pages'
+import {Contact, Home ,Login,Signup,TermsPrivacy} from './pages'
 
 export default function App() {
 
@@ -10,7 +10,7 @@ export default function App() {
       <Route path='/login' element={<Login log={true} />} />
       <Route path='/signup' element={<Signup log={false} />} />
       <Route path='/contact' element={<Contact />} />
-      <Route path="*" element={<_404_ />} />
+      <Route path="/terms-of-service" element={<TermsPrivacy/>} />
     </Routes>
   )
 }
