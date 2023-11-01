@@ -1,0 +1,16 @@
+.all{
+    padding: 25px;
+    margin: auto;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+  
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
